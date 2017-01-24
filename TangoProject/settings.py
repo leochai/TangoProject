@@ -13,6 +13,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
 
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -90,7 +91,9 @@ TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
 
-print __file__
-print os.path.dirname(__file__)
-print os.path.dirname(os.path.dirname(__file__))
-print TEMPLATE_PATH
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
